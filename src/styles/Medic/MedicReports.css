@@ -1,0 +1,188 @@
+.medic-reports-content {
+  max-width: 1200px;
+}
+
+.medic-reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.medic-reports-header h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.medic-select {
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+}
+
+.medic-reports-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.medic-report-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.medic-report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.medic-report-header h4 {
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.medic-chart-placeholder {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f8fafc;
+  border-radius: 8px;
+  color: #64748b;
+}
+
+.medic-chart-bars {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 8px;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.medic-chart-bar {
+  width: 20px;
+  background: #1e40af;
+  border-radius: 2px 2px 0 0;
+}
+
+.medic-conditions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.medic-condition-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.medic-condition-item:last-child {
+  border-bottom: none;
+}
+
+.medic-condition-count {
+  font-weight: 600;
+  color: #1e40af;
+}
+
+/* Sección de Gráficos de Salud */
+.medic-health-charts-section {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.medic-health-charts-section h4 {
+  color: #1e293b;
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.medic-health-charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+}
+
+.medic-chart-item {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.medic-chart-item:hover {
+  border-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+}
+
+.medic-chart-item h5 {
+  color: #1e40af;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.medic-health-chart {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.medic-health-chart:hover {
+  transform: scale(1.02);
+}
+
+.medic-chart-item p {
+  color: #64748b;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
+  text-align: left;
+}
+/* Responsive para reportes */
+@media (max-width: 1024px) {
+  .medic-reports-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .medic-health-charts-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .medic-health-charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .medic-chart-item {
+    padding: 12px;
+  }
+  
+  .medic-health-chart {
+    max-width: 100%;
+  }
+}

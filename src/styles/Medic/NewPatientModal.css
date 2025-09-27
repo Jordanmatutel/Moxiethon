@@ -1,0 +1,317 @@
+.medic-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.medic-modal {
+  background: white;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.medic-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 2px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.medic-modal-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1e293b;
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.medic-modal-close {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.medic-modal-close:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.medic-modal-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px;
+}
+
+.medic-patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.medic-form-section {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.medic-form-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.medic-form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.medic-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.medic-form-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.medic-form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.3s ease;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.medic-form-textarea:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+/* Selector de Movilidad */
+.medic-mobility-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.medic-mobility-scale {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.medic-mobility-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.medic-mobility-option:hover {
+  background: #f1f5f9;
+}
+
+.medic-mobility-option input[type="radio"] {
+  margin: 0;
+}
+
+.medic-mobility-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Grid de Padecimientos */
+.medic-conditions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.medic-condition-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.medic-condition-checkbox:hover {
+  border-color: #1e40af;
+  background: #f0f9ff;
+}
+
+.medic-condition-checkbox input[type="checkbox"]:checked + span {
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.medic-condition-checkbox input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Importación CSV */
+.medic-section-header-with-import {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.medic-btn-import {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.medic-btn-import:hover {
+  background: #0284c7;
+}
+
+.medic-csv-import {
+  background: #f0f9ff;
+  border: 2px solid #0ea5e9;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.medic-csv-help {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+  color: #0369a1;
+}
+
+.medic-csv-help code {
+  background: #e0f2fe;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.medic-csv-textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #bae6fd;
+  border-radius: 6px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  background: white;
+  resize: vertical;
+}
+
+.medic-csv-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.medic-btn-cancel {
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.medic-btn-cancel:hover {
+  background: #4b5563;
+}
+
+/* Footer del Modal */
+.medic-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 20px 24px;
+  border-top: 2px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+/* Responsive para el modal */
+@media (max-width: 768px) {
+  .medic-modal-overlay {
+    padding: 10px;
+  }
+  
+  .medic-modal {
+    max-height: 95vh;
+  }
+  
+  .medic-form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .medic-conditions-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .medic-mobility-scale {
+    justify-content: flex-start;
+  }
+  
+  .medic-modal-footer {
+    flex-direction: column;
+  }
+}

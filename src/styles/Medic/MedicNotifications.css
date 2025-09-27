@@ -1,0 +1,299 @@
+.medic-notifications-content {
+  max-width: 1200px;
+}
+
+.medic-notifications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.medic-notifications-header h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.medic-notifications-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.medic-notifications-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.medic-filter-select {
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+}
+
+.medic-filter-select:focus {
+  outline: none;
+  border-color: #1e40af;
+}
+
+.medic-notifications-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.medic-notification-stat {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.medic-notification-stat:hover {
+  border-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+}
+
+.medic-notification-stat h4 {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.medic-notification-stat .stat-number {
+  color: #1e293b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.medic-notification-stat.sent {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.medic-notification-stat.pending {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.medic-notification-stat.failed {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.medic-notification-stat.total {
+  border-color: #0ea5e9;
+  background: #f0f9ff;
+}
+
+.medic-notifications-list {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.medic-notifications-list-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.medic-notifications-list-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.medic-notifications-list-row:hover {
+  background: #f8fafc;
+}
+
+.medic-notifications-list-row:last-child {
+  border-bottom: none;
+}
+
+.medic-notification-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.medic-notification-title {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.medic-notification-subtitle {
+  color: #64748b;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.medic-notification-recipients {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.medic-notification-date {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.medic-notification-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.medic-notification-status.sent {
+  background: #10b981;
+}
+
+.medic-notification-status.pending {
+  background: #f59e0b;
+}
+
+.medic-notification-status.failed {
+  background: #ef4444;
+}
+
+.medic-notification-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.medic-btn-notification {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.medic-btn-notification.view {
+  background: #1e40af;
+  color: white;
+}
+
+.medic-btn-notification.view:hover {
+  background: #1e3a8a;
+}
+
+.medic-btn-notification.resend {
+  background: #f59e0b;
+  color: white;
+}
+
+.medic-btn-notification.resend:hover {
+  background: #d97706;
+}
+
+.medic-btn-notification.delete {
+  background: #ef4444;
+  color: white;
+}
+
+.medic-btn-notification.delete:hover {
+  background: #dc2626;
+}
+
+.medic-no-notifications {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
+
+.medic-no-notifications h4 {
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+.medic-no-notifications p {
+  margin: 0;
+}
+
+/* Responsive para notificaciones */
+@media (max-width: 768px) {
+  .medic-notifications-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .medic-notifications-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .medic-notifications-filters {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .medic-notifications-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .medic-notifications-list-header,
+  .medic-notifications-list-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .medic-notifications-list-header {
+    display: none;
+  }
+  
+  .medic-notifications-list-row {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .medic-notification-actions {
+    justify-content: center;
+  }
+}

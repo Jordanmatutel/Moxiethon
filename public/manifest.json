@@ -1,0 +1,16 @@
+{
+  "short_name": "Navi",
+  "name": "Navi",
+  "icons": [
+    {
+      "src": "%PUBLIC_URL%/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#97ca3f",
+  "background_color": "#233553",
+  "description": "Valley International Supply - Distributor of industrial automation equipment from top brands like STEINEL, NOSHOK, SICK, Siemens, and more."
+}

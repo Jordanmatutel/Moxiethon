@@ -1,0 +1,309 @@
+.medic-appointments-content {
+  max-width: 1200px;
+}
+
+.medic-appointments-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.medic-appointments-header h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.medic-appointments-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.medic-appointments-filters {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.medic-filter-select {
+  padding: 8px 12px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+}
+
+.medic-filter-select:focus {
+  outline: none;
+  border-color: #1e40af;
+}
+
+.medic-appointments-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.medic-appointment-stat {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.medic-appointment-stat h4 {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.medic-appointment-stat .stat-number {
+  color: #1e293b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.medic-appointment-stat.today {
+  border-color: #0ea5e9;
+  background: #f0f9ff;
+}
+
+.medic-appointment-stat.pending {
+  border-color: #f59e0b;
+  background: #fffbeb;
+}
+
+.medic-appointment-stat.completed {
+  border-color: #10b981;
+  background: #f0fdf4;
+}
+
+.medic-appointment-stat.cancelled {
+  border-color: #ef4444;
+  background: #fef2f2;
+}
+
+.medic-appointments-table {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.medic-appointments-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1.5fr;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.medic-appointments-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr 1fr 1.5fr;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.medic-appointments-table-row:hover {
+  background: #f8fafc;
+}
+
+.medic-appointments-table-row:last-child {
+  border-bottom: none;
+}
+
+.medic-appointment-patient {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.medic-appointment-patient strong {
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.medic-appointment-patient span {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.medic-appointment-datetime {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.medic-appointment-date {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.medic-appointment-time {
+  color: #64748b;
+  font-size: 0.8rem;
+}
+
+.medic-appointment-reason {
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.medic-appointment-status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.medic-appointment-status.scheduled {
+  background: #0ea5e9;
+}
+
+.medic-appointment-status.completed {
+  background: #10b981;
+}
+
+.medic-appointment-status.cancelled {
+  background: #ef4444;
+}
+
+.medic-appointment-status.in-progress {
+  background: #f59e0b;
+}
+
+.medic-appointment-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.medic-btn-appointment {
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.medic-btn-appointment.edit {
+  background: #1e40af;
+  color: white;
+}
+
+.medic-btn-appointment.edit:hover {
+  background: #1e3a8a;
+}
+
+.medic-btn-appointment.complete {
+  background: #10b981;
+  color: white;
+}
+
+.medic-btn-appointment.complete:hover {
+  background: #059669;
+}
+
+.medic-btn-appointment.cancel {
+  background: #ef4444;
+  color: white;
+}
+
+.medic-btn-appointment.cancel:hover {
+  background: #dc2626;
+}
+
+.medic-btn-appointment.reschedule {
+  background: #f59e0b;
+  color: white;
+}
+
+.medic-btn-appointment.reschedule:hover {
+  background: #d97706;
+}
+
+.medic-recurring-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #8b5cf6;
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.medic-no-appointments {
+  text-align: center;
+  padding: 40px;
+  color: #64748b;
+}
+
+.medic-no-appointments h4 {
+  color: #1e293b;
+  margin-bottom: 8px;
+}
+
+/* Responsive para consultas */
+@media (max-width: 768px) {
+  .medic-appointments-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .medic-appointments-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .medic-appointments-filters {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .medic-appointments-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .medic-appointments-table-header,
+  .medic-appointments-table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .medic-appointments-table-header {
+    display: none;
+  }
+  
+  .medic-appointments-table-row {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .medic-appointment-actions {
+    justify-content: center;
+  }
+}

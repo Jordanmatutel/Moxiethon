@@ -1,0 +1,224 @@
+.medic-settings-content {
+  max-width: 1000px;
+}
+
+.medic-settings-content h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.medic-settings-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.medic-settings-section {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.medic-settings-section:hover {
+  border-color: #1e40af;
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+}
+
+.medic-settings-section h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.medic-settings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.medic-settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.medic-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.medic-form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.medic-form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.medic-form-input:focus {
+  outline: none;
+  border-color: #1e40af;
+  box-shadow: 0 0 0 3px rgba(30, 64, 175, 0.1);
+}
+
+.medic-settings-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.medic-notification-group {
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.medic-notification-group h5 {
+  color: #1e40af;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.medic-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e293b;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 8px 0;
+  transition: all 0.3s ease;
+}
+
+.medic-checkbox-label:hover {
+  color: #1e40af;
+}
+
+.medic-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+}
+
+/* Selector de Días */
+.medic-days-selector {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.medic-day-checkbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.medic-day-checkbox:hover {
+  border-color: #1e40af;
+  background: #f0f9ff;
+}
+
+.medic-day-checkbox input[type="checkbox"]:checked + span {
+  color: #1e40af;
+}
+
+.medic-day-checkbox input[type="checkbox"] {
+  margin: 0;
+}
+
+/* Botones de Acción */
+.medic-settings-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+}
+
+.medic-btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #6b7280;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.medic-btn-secondary:hover {
+  background: #4b5563;
+  transform: translateY(-1px);
+}
+
+.medic-btn-export {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #0ea5e9;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.medic-btn-export:hover {
+  background: #0284c7;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .medic-settings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .medic-settings-actions {
+    flex-direction: column;
+  }
+  
+  .medic-days-selector {
+    justify-content: center;
+  }
+}

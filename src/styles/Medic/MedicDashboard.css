@@ -1,0 +1,446 @@
+.medic-dashboard-container {
+  min-height: 100vh;
+  min-width: 1400px;
+  max-width: 1400px;
+  background: #f8fafc;
+}
+
+.medic-header {
+  background: white;
+  border-bottom: 2px solid #e2e8f0;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.medic-header-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.medic-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1e40af;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.medic-doctor-info h2 {
+  color: #1e293b;
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.medic-doctor-info p {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.medic-header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.medic-notification-btn {
+  position: relative;
+  background: #f1f5f9;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+
+.medic-notification-btn:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.medic-notification-badge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #dc2626;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+.medic-logout-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.medic-logout-btn:hover {
+  background: #b91c1c;
+  transform: translateY(-1px);
+}
+
+.medic-main-content {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+.medic-sidebar {
+  width: 250px;
+  background: white;
+  border-right: 2px solid #e2e8f0;
+  padding: 24px 0;
+}
+
+.medic-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 16px;
+}
+
+.medic-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #64748b;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.medic-nav-item:hover {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.medic-nav-item.active {
+  background: #1e40af;
+  color: white;
+}
+
+.medic-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* Dashboard Content */
+.medic-dashboard-content {
+  max-width: 1200px;
+}
+
+.medic-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.medic-stat-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.medic-stat-card:hover {
+  border-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 64, 175, 0.1);
+}
+
+.medic-stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.medic-stat-icon.patients {
+  background: #10b981;
+}
+
+.medic-stat-icon.appointments {
+  background: #f59e0b;
+}
+
+.medic-stat-icon.reports {
+  background: #8b5cf6;
+}
+
+.medic-stat-icon.alerts {
+  background: #ef4444;
+}
+
+.medic-stat-info h3 {
+  color: #1e293b;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.medic-stat-number {
+  color: #1e293b;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.medic-stat-change {
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+.medic-stat-change.positive {
+  color: #10b981;
+}
+
+.medic-stat-change.warning {
+  color: #f59e0b;
+}
+
+.medic-stat-change.urgent {
+  color: #ef4444;
+}
+
+.medic-dashboard-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.medic-section {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.medic-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.medic-section-header h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #1e293b;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.medic-btn-small {
+  background: #1e40af;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.3s ease;
+}
+
+.medic-btn-small:hover {
+  background: #1e3a8a;
+}
+
+.medic-appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.medic-appointment-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #1e40af;
+}
+
+.medic-appointment-time {
+  font-weight: 700;
+  color: #1e40af;
+  font-size: 0.9rem;
+  min-width: 50px;
+}
+
+.medic-appointment-details {
+  flex: 1;
+}
+
+.medic-appointment-details h4 {
+  color: #1e293b;
+  font-size: 0.9rem;
+  margin: 0 0 2px 0;
+}
+
+.medic-appointment-details p {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.medic-btn-action {
+  background: #f1f5f9;
+  color: #1e40af;
+  border: 1px solid #e2e8f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.medic-btn-action:hover {
+  background: #e2e8f0;
+}
+
+.medic-alerts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.medic-alert-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 4px solid;
+}
+
+.medic-alert-item.urgent {
+  background: #fef2f2;
+  border-left-color: #dc2626;
+}
+
+.medic-alert-item.reminder {
+  background: #fefbf2;
+  border-left-color: #f59e0b;
+}
+
+.medic-alert-item.info {
+  background: #f0f9ff;
+  border-left-color: #0ea5e9;
+}
+
+.medic-alert-content {
+  flex: 1;
+}
+
+.medic-alert-content p {
+  color: #1e293b;
+  font-size: 0.85rem;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.medic-alert-time {
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.medic-alert-dismiss {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.medic-alert-dismiss:hover {
+  color: #1e293b;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .medic-main-content {
+    flex-direction: column;
+  }
+  
+  .medic-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 2px solid #e2e8f0;
+  }
+  
+  .medic-nav {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 0 16px;
+  }
+  
+  .medic-nav-item {
+    white-space: nowrap;
+  }
+  
+  .medic-dashboard-sections {
+    grid-template-columns: 1fr;
+  }
+  
+  .medic-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .medic-header {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .medic-header-left {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

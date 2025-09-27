@@ -1,0 +1,143 @@
+.medic-patients-content {
+  max-width: 1200px;
+}
+
+.medic-patients-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.medic-patients-header h3 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.medic-patients-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.medic-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.medic-search-box input {
+  padding: 8px 12px 8px 36px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  width: 250px;
+}
+
+.medic-search-box svg {
+  position: absolute;
+  left: 10px;
+  color: #64748b;
+}
+
+.medic-patients-table {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.medic-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 16px;
+  background: #f8fafc;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 0.9rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.medic-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr 1fr 1.5fr 1.5fr;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.medic-table-row:hover {
+  background: #f8fafc;
+}
+
+.medic-table-row:last-child {
+  border-bottom: none;
+}
+
+.medic-patient-info strong {
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.medic-status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.medic-table-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.medic-btn-report {
+  background: #0ea5e9 !important;
+  color: white !important;
+}
+
+.medic-btn-report:hover {
+  background: #0284c7 !important;
+}
+
+/* Responsive para tabla de pacientes */
+@media (max-width: 768px) {
+  .medic-patients-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+  
+  .medic-patients-actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .medic-search-box input {
+    width: 100%;
+  }
+  
+  .medic-table-header,
+  .medic-table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  
+  .medic-table-header {
+    display: none;
+  }
+  
+  .medic-table-row {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 8px;
+  }
+}
